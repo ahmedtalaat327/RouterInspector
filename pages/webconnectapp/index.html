@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link class="icon-page" rel="icon" href="images/new_of_logo_connect.png">
+    <title>Home official</title>
+</head>
+<body  class="background-main">
+   
+    <section class="container">
+    
+    <div class="big-title">
+    <p > Graphical Network Scanner Tool </p>
+    <p class="details">Wonderfull way to show devices connected to your router or modem  more features <br> is included simply you can cut off internet activity from one person! </p>
+   <div class="video-container">
+    <video width="320" height="240" controls>
+        <source src="/pages/webconnectapp/vids/Router Inspector 2023-12-10 15-32-08.mp4" type="video/mp4">
+       
+      Your browser does not support the video tag.
+      </video>
+   </div>
+
+    </div>
+    <div class="grid-container">
+
+        <div class="card">
+            <div class="bg-img">
+                <img class="utility-bg" src="./pages/webconnectapp/images/new_of_logo_utility.png">
+            </div>
+            <div class="content">
+            <h2>Utility</h2>
+            <p>Great way to achieve more in monitoring changes and behaviour only in DHCP.<br>Most watchers does not have this feature so<br>We added this option as a bonus feature by installing WinPcap.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="bg-img">
+                <img class="utility-bg" src="./pages/webconnectapp/images/verified.png">
+            </div>
+            <div class="content">
+            <h4>Verified as Software</h4>
+            <p>This app is able to work under 64x <br>systems on both Windows 10 and next generation of windows.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="bg-img">
+                <img class="utility-bg" src="./pages/webconnectapp/images/verified.png">
+            </div>
+            <div class="content">
+            <h4>Notifications</h4>
+            <p>We also added amazing feature is to notify you if there is something new.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="bg-img">
+                <img class="utility-bg" src="./pages/webconnectapp/images/beta.png"> 
+            </div>
+            <div class="content">
+            <h4>Updates</h4>
+            <p>We provide and test new updates and bug fixes this is depending on your usage and reports.<br>Support us to keep it up.</p>
+            </div>
+        </div>
+
+    </div>
+    
+   
+   
+   
+    <!-- (A) LIST USERS HERE -->
+<div id="demo"></div>
+
+<!-- (B) FETCH USERS VIA AJAX -->
+<script>
+// NOTE: RUN WITH HTTP://, NOT FILE://
+window.addEventListener("load", () => {
+  fetch("./src/pkgsDBTest.php", { method : "POST" })
+  .then(res => res.text()).then((txt) => {
+  //  document.getElementById("dwnlink").innerHTML = txt;
+  var a = document.getElementById("dwnlink"); //or grab it by tagname etc
+   a.href = txt;
+  });
+});
+</script>
+
+
+</body>
+</html>
