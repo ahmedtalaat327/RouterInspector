@@ -1,0 +1,14 @@
+{
+    "require": {
+
+        "phpoffice/phpspreadsheet": "^1.17.1",
+        "guzzlehttp/guzzle": "~6.0",
+        "ext-mysqli": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "monolog/monolog": "^2.2",
+        "kreait/firebase-php": "^5.26"
+
+    }
+}
