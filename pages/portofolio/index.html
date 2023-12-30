@@ -31,7 +31,7 @@
             
                 <div class="login-form">
                  
-                     <form  onsubmit="return loadUsers();">
+                     <form  name="myform" method="get" onsubmit="loadUsers(this); return false;">
                       <div>
                         <label>Email</label>
                         <input type="text" name="email" id="email" autofocus required />

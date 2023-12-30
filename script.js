@@ -1,5 +1,5 @@
 
-let main_server = "https://ahmedtalaat327.github.io/RouterInspector";
+let main_server = "http://localhost:5500";
 
 
 

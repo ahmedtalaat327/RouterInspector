@@ -1,22 +1,40 @@
 
 
  let $db_uri = main_server+'/pages/mridbconn.php';
- let $retunString = "non";
-// NOTE: RUN WITH HTTP://, NOT FILE://
-  function loadUsers(){
-/*
-  
-  
-  fetch($db_uri)
-  .then(response => response.text())
-  .then((response) => {
-      $retunString = response;
-      console.log($retunString)
-  })
-  .catch(err => console.log(err))
+ let $retunString = "nill";
 
-  return $retunString;
-  */
+ async function loadUsers(form){
+
+ 
+  //api option
+  await fetch(
+    $db_uri, {
+    method: 'GET',
+    dataType: 'json'
+  })
+  .then(async response => {
+    console.log(response);
+    try {
+     const data = await response.json();
+     $retunString = data;
+     console.log('response data?', data);
+     
+       //if response succeeded and validation done!
+     if(form!=undefined){
+      HTMLFormElement.prototype.submit.call(form);
+      }
+
+   } catch(error) {
+     console.log('Error happened here!');
+     console.error(error);
+
+    
+  }
+  })
+  
+
+   
+  
 /*
  $.ajax({
     url: $db_uri,
@@ -35,7 +53,7 @@
         console.log($retunString);
 return  $retunString;
 */
-
+/*
 var xhr = new XMLHttpRequest();
 xhr.open('GET',$db_uri,true);
 xhr.onreadystatechange = function(){
@@ -48,5 +66,5 @@ xhr.onreadystatechange = function(){
 xhr.send();
 
 return $retunString;
-
+*/
 };
