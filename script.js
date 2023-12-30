@@ -1,6 +1,6 @@
 
-let main_server = "http://localhost:5500";
-
+//let main_server = "http://localhost:5500";
+let main_server = "https://ahmedtalaat327.github.io/RouterInspector";
 
 
 const expand_btn = document.querySelector(".expand-btn");
